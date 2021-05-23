@@ -3,8 +3,9 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 
+function promptUser(){
 // TODO: Create an array of questions for user input
-const questions = ["What is your GitHub username?", "What is your email address", "What is your project's name?", "Please write a short description of your project", "What kind of license should your project have?", "What command should be run to install dependencies?", "What command should be run to run tests?", "What does the user need to know about using this repo?", "What does the user need to know about contributing to this repo?"];
+const questions = ["What is your GitHub username?", "What is your email address?", "What is your project's name?", "Please write a short description of your project", "What kind of license should your project have?", "What command should be run to install dependencies?", "What command should be run to run tests?", "What does the user need to know about using this repo?", "What does the user need to know about contributing to this repo?"];
 inquirer
 .prompt([
   {
@@ -47,7 +48,7 @@ inquirer
                             },
                             {
                                 type: "input",
-                                name: "know",
+                                name: "usage",
                                 message: questions[7],
                                 },
                                 {
@@ -59,11 +60,11 @@ inquirer
 
 ).then(function(data){
 
-  console.log(data);
- writeToFile('./README1.md',data );
+ // console.log(data);
+ writeToFile('./README.md',data );
 
 })
-
+}
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
   
@@ -73,14 +74,18 @@ function writeToFile(fileName, data) {
       return console.log(err);
     }
 
-    console.log("Success!");
+    console.log("Generating README...");
 
   });
 
 }
 
 // TODO: Create a function to initialize app
-//function init() {}
+function init() {
+promptUser();
+
+
+}
 
 // Function call to initialize app
-//init();
+init();
