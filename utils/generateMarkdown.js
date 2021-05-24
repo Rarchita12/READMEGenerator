@@ -1,6 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
+  //generate badge based on selection
   var url; 
  if(license === "APACHE 2.0"){
    url = "https://img.shields.io/static/v1?label=license&message=APACHE%202.0&color=blue"
@@ -22,6 +23,7 @@ return `![](${url})`
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
+  //link license section if it exists 
 if(license === "None"){
  
     return ``
@@ -35,6 +37,7 @@ if(license === "None"){
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
+  //create license section if a license was selected 
   if(license === "None"){
     return ``
   }
@@ -59,10 +62,11 @@ function generateMarkdown(data) {
 
 * [Installation](#installation)
 * [Usage](#usage)
+${renderLicenseLink(data.license)}
 * [Contributing](#contributing)
 * [Tests](#tests)
 * [Questions](#questions)
-${renderLicenseLink(data.license)}
+
 
 ## Installation
 
@@ -94,11 +98,11 @@ ${data.tests}
 GitHub Username: ${data.username}
 GitHub Profile Link: https://github.com/${data.username}
 Email: ${data.email}
-If you have any additonal questions about the repo, open an issue or contact me directly at ${data.email}. You can find more of my work at https://github.com/${data.username}.
+If you have any additional questions about the repo, open an issue or contact me directly at ${data.email}. You can find more of my work at https://github.com/${data.username}.
 
 `);
 
 }
-
+//export generateMarkdown
 module.exports = generateMarkdown;
 

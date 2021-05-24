@@ -3,9 +3,12 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 
+//Function to Promp the User with Questions 
 function promptUser(){
 // TODO: Create an array of questions for user input
 const questions = ["What is your GitHub username?", "What is your email address?", "What is your project's name?", "Please write a short description of your project", "What kind of license should your project have?", "What command should be run to install dependencies?", "What command should be run to run tests?", "What does the user need to know about using this repo?", "What does the user need to know about contributing to this repo?"];
+
+//promt User Questions 
 inquirer
 .prompt([
   {
@@ -60,14 +63,14 @@ inquirer
 
 ).then(function(data){
 
- // console.log(data);
+//Write user's input to README file
  writeToFile('./README.md',data );
 
 })
 }
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-  
+  //write to README file and call the generateMarkdown function
   fs.writeFile(``+fileName, generateMarkdown(data), function(err) {
 
     if (err) {

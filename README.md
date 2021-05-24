@@ -1,17 +1,18 @@
-# jlksfd
+# HELLO
 
-  ![](https://img.shields.io/static/v1?label=license&message=MIT&color=blue)
+  ![](https://img.shields.io/static/v1?label=license&message=APACHE%202.0&color=blue)
   ## Description 
 
-  jkslf
+  This is a test
   ## Table of Contents 
 
 * [Installation](#installation)
 * [Usage](#usage)
+* [License](#license)
 * [Contributing](#contributing)
 * [Tests](#tests)
 * [Questions](#questions)
-* [License](#license)
+
 
 ## Installation
 
@@ -23,16 +24,16 @@ npm i
 
 ## Usage 
 
-fsd
+Everything
 
 
 ## License 
   
-  This project is licensed under the MIT license.
+  This project is licensed under the APACHE 2.0 license.
 
 ## Contributing 
 
-fsd
+User needs to contribute through GitHub
 
 ## Tests
 
@@ -42,8 +43,8 @@ npm test
 ```
 ## Questions 
 
-GitHub Username: kjfldskj
-GitHub Profile Link: https://github.com/kjfldskj
-Email: jklfsjd
-If you have any additonal questions about the repo, open an issue or contact me directly at jklfsjd. You can find more of my work at https://github.com/kjfldskj.
+GitHub Username: Rarchita12
+GitHub Profile Link: https://github.com/Rarchita12
+Email: archita.racherla@gmail.com
+If you have any additional questions about the repo, open an issue or contact me directly at archita.racherla@gmail.com. You can find more of my work at https://github.com/Rarchita12.
 
